@@ -29,7 +29,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   
 }
 
@@ -46,11 +46,34 @@ body {
 
 .pls-donate-ahh img:hover{
   transform: scale(1.5);
-  filter: sepia(1) saturate(8) hue-rotate(-15deg);
+  filter: sepia(1) saturate(10) hue-rotate(0deg);
 }
 
 .pls-donate-ahh-fixed img{
   width: 20px;
+}
+
+.version-details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 15px;
+  
+}
+
+.version-details span{
+  padding: 1px 7px 1px 7px;
+  /* border: 2px solid; */
+  border-radius: 5px;
+  fill: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.version-details span:hover{
+  transform: scale(1.2);
+  color: #2af85d;
 }
 
 .panel{
@@ -68,11 +91,11 @@ body {
 .panel .logo-details {
   height: 60px;
   width: 100%;
-  padding-top: 15px;
+  padding-top: 20px;
   display: flex;
   align-items: center;
   z-index: 3;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .panel .logo-image {
@@ -97,7 +120,8 @@ body {
 
 .panel .nav-links{
   /* background: maroon; */
-  height: 400px;
+  /***************** height: original - 390px (4 nodes)********************/
+  height: auto;
   padding: 0 0 0px 0;
   overflow: auto;
 }
@@ -293,4 +317,40 @@ body {
 
 .panel .profile-details .profile-title{
   font-size: 12px;
+}
+
+/* updates panel */
+
+.hidden {
+  display: none;
+}
+
+.whats-new {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1d1a35;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 200px;
+  text-align: left;
+}
+
+.whats-new h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.whats-new ul {
+  list-style: none;
+  padding: 0;
+}
+
+.whats-new ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
 }
