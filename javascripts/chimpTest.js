@@ -3,43 +3,43 @@ import { ChimpTest, Overlays } from './constants.js';
 
 function save(interval=ChimpTest.intervalInput.value, target=ChimpTest.scoreInput.value, auto=true){
   var err=false;
-  console.log('Chimp save button click');
+  //console.log('Chimp save button click');
   if(interval<0){
-    interval=0
+    ChimpTest.intervalInput.value=0
     notify('.timetravel-zero-warning')
     err=true;
   }else if(interval>=1000000000000){
-    interval=999999999999
+    ChimpTest.intervalInput.value=999999999999
     notify('.large-input-warning')
     err=true;
   }
   if(target<5){
-    target=5
+    ChimpTest.scoreInput.value=5
     notify('.chimp-range-warning')
     err=true;
   }else if(target>41){
-    target=41
+    ChimpTest.scoreInput.value=41
     notify('.chimp-range-warning')
     err=true;
   }
   if(!err){
     setLocal('chimp-test',[parseInt(interval), parseInt(target), auto])
     hideOverlays()
-    console.log('saved request processed')
+    //console.log('saved request processed')
   }
 }
 
 function refresh(key='chimp-test') {
   chrome.storage.local.get([key], (r) => {
     const result = r[key];
-    console.log('Getting:', key, ':', result);
+    //console.log('Getting:', key, ':', result);
     if (result) {
-      console.log('Found -', key, ':', 'interval:', result[0], 'score:', result[1], 'autoSwitch:', result[2]);
+      //console.log('Found -', key, ':', 'interval:', result[0], 'score:', result[1], 'autoSwitch:', result[2]);
       setValues(result[0], result[1], result[2]);
       setState(result[0])
     } else {
       const defaultTimes = [15, 41, true];
-      console.log('Key not found, using default:', defaultTimes);
+      //console.log('Key not found, using default:', defaultTimes);
       setValues(defaultTimes[0], defaultTimes[1], defaultTimes[2]);
       setState(defaultTimes[0])
       save()
@@ -49,7 +49,7 @@ function refresh(key='chimp-test') {
 
 function reset(){
   const defaultTimes = [15, 41, true];
-  console.log('Using default:', defaultTimes);
+  //console.log('Using default:', defaultTimes);
   setValues(defaultTimes[0], defaultTimes[1], defaultTimes[2]);
 }
 
@@ -62,11 +62,11 @@ function setValues(interval, score, autoSwitch) {
 
   const intervalColor = `linear-gradient(90deg, rgb(105, 67, 255) ${interval}%, rgb(99, 99, 99) ${interval}%)`;
   ChimpTest.intervalSlider.style.background = intervalColor;
-  console.log('Updated ChimpTest.intervalSlider');
+  //console.log('Updated ChimpTest.intervalSlider');
 
   const scoreColor = `linear-gradient(90deg, rgb(105, 67, 255) ${mapValue(score, 5, 41)}%, rgb(99, 99, 99) ${mapValue(score, 5, 41)}%)`;
   ChimpTest.scoreSlider.style.background = scoreColor;
-  console.log('Updated ChimpTest.scoreSlider');
+  //console.log('Updated ChimpTest.scoreSlider');
 }
 
 function close(){
