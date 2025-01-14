@@ -2,7 +2,7 @@ import * as timetable from './timetable.js'
 import * as reactionTime from './reactionTime.js'
 import * as chimpTest from './chimpTest.js'
 import * as carleton from './carleton-loader.js'
-import { Interface, Overlays, Banners } from './constants.js';
+import { Interface, Overlays, Banners, TimetableTools } from './constants.js';
 
 const save = {
   'timetable-tools': () => timetable.save(),
@@ -49,6 +49,11 @@ const show = {
 
 const loader={
   'carleton':(e)=> carleton.loader(e)
+}
+
+const policy = {
+  'timetable-tools': ()=>{chrome.tabs.create({ url: TimetableTools.policyURL });},
+  'interface': ()=>{chrome.tabs.create({ url: Interface.policyURL });}
 }
 
 // click listener & menu toggle - Interface.nodes
@@ -157,6 +162,13 @@ Overlays.infoBtns.forEach(btn=>{
     e.stopPropagation()
     //console.log(e,'pressed')
     notify(btn.dataset.info)
+  })
+})
+
+Overlays.policyBtns.forEach(b=>{
+  b.addEventListener('click',e=>{
+    policy[b.dataset.node]()
+    console.log("clicked",b.dataset.node)
   })
 })
 
@@ -366,8 +378,8 @@ function init(){
       chrome.action.setIcon({path:r[1]})
     }
     else{
-      Interface.popupLogo.src=chrome.runtime.getURL('images/pull-shark.png')
-      chrome.action.setIcon({path:'images/pull-shark128.png'})
+      Interface.popupLogo.src=chrome.runtime.getURL('images/sky-icon.png')
+      chrome.action.setIcon({path:'images/sky-icon128.png'})
     }
     refreshLogo()
   })
