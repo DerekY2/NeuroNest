@@ -11,7 +11,7 @@ logo.addEventListener('click',()=>{
 })
 
 function toggleIcon(){
-  console.log('before:',logo.src)
+  // console.log('before:',logo.src)
   if(logo.src.includes('images/sky-icon.png')){
     logo.src='images/pull-shark.png'
     favicon.setAttribute('href','images/pull-shark.png')
@@ -31,5 +31,5 @@ function toggleIcon(){
     changeIconBtn.classList.remove('bx-color')
     changeIconBtn.classList.remove('bxs-color')
   }
-  console.log('after:',logo.src)
+  // console.log('after:',logo.src)
 }
