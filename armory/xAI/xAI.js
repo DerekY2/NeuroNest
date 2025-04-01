@@ -148,7 +148,7 @@ async function sendMessage(input) {
     catch (error) {
         if (error.message === "Failed to fetch") {
             // chatContainer.innerHTML += `<div class="error"><p>${error}</p></div>`;
-            chatContainer.innerHTML += `<div class="error"><p>ERROR: Unable to connect to the server.</p></div>`;
+            chatContainer.innerHTML += `<div class="error"><p>ERROR: Unable to connect to server.</p></div>`;
         } else {
             chatContainer.innerHTML += `<div class="error"><p>ERROR: ${error.message}</p></div>`;
         }
