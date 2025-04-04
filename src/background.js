@@ -145,7 +145,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
-
 chrome.webNavigation.onCommitted.addListener((details) => {
   chrome.storage.session.get(['timetable-requested'], (result) => {
     const r = result['timetable-requested'];
@@ -172,3 +171,14 @@ function injectScript(tabId, file) {
     files: [file]
   });
 }
+
+chrome.runtime.onStartup.addListener(() => {
+  chrome.storage.local.get('popup-icon-src', (result) => {
+    const r = result['popup-icon-src'];
+    if (r) {
+      chrome.action.setIcon({ path: r[1] });
+    } else {
+      chrome.action.setIcon({ path: 'images/sky-icon128.png' });
+    }
+  });
+});
