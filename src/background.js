@@ -173,13 +173,13 @@ function injectScript(tabId, file) {
 }
 
 chrome.runtime.onStartup.addListener(() => {
-  chrome.storage.local.get('popup-icon-src', 'privacy_policy_agreement',(result)=>{
+  chrome.storage.local.get('popup-icon-src',(result)=>{
     const r=result['popup-icon-src']
     if(r){
-      chrome.action.setIcon({path:r[1]})
+      chrome.action.setIcon({path:chrome.runtime.getURL(r[1])})
     }
     else{
-      chrome.action.setIcon({path:'images/sky-icon128.png'})
+      chrome.action.setIcon({path:chrome.runtime.getURL('images/sky-icon128.png')})
     }
   })
 });
