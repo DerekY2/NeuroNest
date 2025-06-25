@@ -24,4 +24,3 @@
 
   $stmt->close();
   $conn->close();
-?>
