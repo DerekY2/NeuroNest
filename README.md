@@ -51,4 +51,4 @@ This project is a collection of web experiments; contributions are welcome! Plea
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
