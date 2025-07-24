@@ -1,6 +1,6 @@
-﻿# Sparkling H2O2
+﻿# NeuroNest
 
-Sparkling H2O2 is a Chrome extension that provides a collection of experimental web functionalities for timetable exports and automated benchmark tests.
+NeuroNest is a Chrome extension that provides a collection of experimental web functionalities for timetable exports and automated benchmark tests.
 
 ## Features
 

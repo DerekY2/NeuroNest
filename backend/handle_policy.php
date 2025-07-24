@@ -14,8 +14,8 @@
   $recorded_date = $data['recorded_date'];
   $agreed = $data['agreed'];
 
-  if($policy=='Sparkling H2O2'){
-    $stmt = $conn->prepare("INSERT INTO Sparkling_H2O2(name, policy, agreed, agreement_date, recorded_date) VALUES(?, ?, ?, ?, ?)");
+  if($policy=='NeuroNest'){
+    $stmt = $conn->prepare("INSERT INTO NeuroNest(name, policy, agreed, agreement_date, recorded_date) VALUES(?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $name, $policy, $agreed, $agreement_date, $recorded_date);
   }
 

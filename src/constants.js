@@ -11,7 +11,7 @@ class Interface {
   // Footer
   static changePopupBtn = document.querySelector('.change-logo-btn');
   static showUpdates = document.querySelector('.show-version-details');
-  static policyURL = 'https://github.com/DerekY2/ext-privacy-policies/blob/main/SPARKLING%20H2O2.md'
+  static policyURL = 'https://github.com/DerekY2/ext-privacy-policies/blob/main/NeuroNest.md'
 }
 
 class Overlays {
@@ -58,7 +58,7 @@ class TimetableTools {
   static overlay = document.querySelector(".timetable.config-overlay");
   static schoolSelect = document.getElementById("school-select");
   static exportMode = document.getElementById('export-mode')
-  static policyURL = 'https://github.com/DerekY2/ext-privacy-policies/blob/main/SPARKLING%20H2O2.md#data-collection'
+  static policyURL = 'https://github.com/DerekY2/ext-privacy-policies/blob/main/NeuroNest.md#data-collection'
 }
 
 class Banners {

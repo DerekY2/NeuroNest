@@ -3,11 +3,11 @@
 
   "manifest_version": 3,
 
-  "name": "Sparkling H2O2",
+  "name": "NeuroNest",
   
-  "short_name": "Sparkling H2O2",
+  "short_name": "NeuroNest",
 
-  "version": "0.3.2.6",
+  "version": "0.3.2.7",
     
   "description": "Collection of projects",
 
@@ -29,7 +29,7 @@
       "service_worker": "src/background.js"
     },
   "action": {
-    "default_title": "Sparkling H2O2",
+    "default_title": "NeuroNest",
     "default_icon": "images/sky-icon.png",
     "default_popup": "popup.html"
   },
