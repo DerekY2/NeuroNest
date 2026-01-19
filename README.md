@@ -7,6 +7,8 @@ NeuroNest is a Chrome extension that provides a collection of experimental web f
 - **Timetable Tools**: Locates and downloads course schedules from supported sites as import-ready calendar (.ics) files. Currently supported: CarletonU .
 - **Reaction Time**: Performs Human Benchmark's Reaction Time test.
 - **Chimp Test**: Performs Human Benchmark's Chimp Test.
+- **Reader.**: Distraction-free reader mode for Chrome.
+- **Redirect to minecraft.wiki**: Automatically redirects minecraft.fandom.com to minecraft.wiki.
 
 ## Installation
 
