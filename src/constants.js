@@ -61,6 +61,11 @@ class TimetableTools {
   static policyURL = 'https://github.com/DerekY2/ext-privacy-policies/blob/main/NeuroNest.md#data-collection'
 }
 
+class ExamTools {
+  static overlay = document.querySelector(".exam-tools.config-overlay");
+  static exportMode = document.getElementById('exam-export-mode')
+}
+
 class Banners {
   static overlay = document.querySelector('.banner-overlay');
   static header = document.querySelector('.banner-header');
@@ -79,5 +84,6 @@ export {
   ReactionTime,
   ChimpTest,
   TimetableTools,
+  ExamTools,
   Banners
 };

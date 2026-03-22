@@ -1,16 +1,19 @@
 import * as timetable from './timetable.js'
 import * as reactionTime from './reactionTime.js'
 import * as chimpTest from './chimpTest.js'
+import * as exams from './exams.js'
 import * as carleton from './carleton-loader.js'
 import { Interface, Overlays, Banners, TimetableTools } from './constants.js';
 
 const save = {
   'timetable-tools': () => timetable.save(),
+  'exam-tools': () => exams.save(),
   'reaction-time': () => reactionTime.save(),
   'chimp-test': () => chimpTest.save()
 };
 const reset = {
   'timetable-tools': () => timetable.reset(),
+  'exam-tools': () => exams.reset(),
   'reaction-time': () => reactionTime.reset(),
   'chimp-test': () => chimpTest.reset()
 }
@@ -20,6 +23,7 @@ const preset = {
 }
 const close = {
   'timetable-tools': () => timetable.close(),
+  'exam-tools': () => exams.close(),
   'reaction-time': () => reactionTime.close(),
   'chimp-test': () => chimpTest.close()
 }
@@ -36,6 +40,7 @@ const refresh = {
   'carleton': (e) => timetable.refresh(e),
   'ottawa': (e) => timetable.refresh(e),
   'waterloo': (e) => timetable.refresh(e),
+  'carleton-exams': (e) => exams.refresh(),
   'reaction-time': (e) => reactionTime.refresh(),
   'chimp-test': (e) => chimpTest.refresh(),
   'popup-icon-src': (e) => refreshLogo()
@@ -43,6 +48,7 @@ const refresh = {
 
 const show = {
   'timetable-tools': (e) => timetable.show(e),
+  'exam-tools': (e) => exams.show(e),
   'reaction-time': (e) => reactionTime.show(e),
   'chimp-test': (e) => chimpTest.show(e)
 }
@@ -427,6 +433,7 @@ function init() {
     }
   })
   timetable.init()
+  exams.init()
   reactionTime.init()
   chimpTest.init()
 }
