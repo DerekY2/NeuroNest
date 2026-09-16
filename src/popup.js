@@ -255,6 +255,9 @@ Interface.showUpdates.addEventListener('click', (e) => {
   window.close()
 })
 
+// pull version from manifest so it never goes stale in the HTML
+Interface.showUpdates.textContent = `v${chrome.runtime.getManifest().version}`
+
 function inject(file, request_url, checkOpen = false) {
   if (checkOpen) {
     chrome.tabs.query({ currentWindow: true, url: request_url }, tabs => {
