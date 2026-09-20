@@ -3,7 +3,7 @@
   "manifest_version": 3,
   "name": "NeuroNest",
   "short_name": "NeuroNest",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Collection of Automation Tools",
   "icons": {
     "48": "images/sky-icon.png",
@@ -13,7 +13,8 @@
     "scripting",
     "storage",
     "activeTab",
-    "webNavigation"
+    "webNavigation",
+    "downloads"
   ],
   "host_permissions": [
     "<all_urls>"
